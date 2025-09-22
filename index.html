@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PuckTracker</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="logo" aria-label="Puck logo with PuckTracker text" role="img">
+      <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <defs>
+          <radialGradient id="puckGrad" cx="50%" cy="45%" r="60%">
+            <stop offset="0%" stop-color="#4d4d4d" />
+            <stop offset="60%" stop-color="#1a1a1a" />
+            <stop offset="100%" stop-color="#000000" />
+          </radialGradient>
+        </defs>
+        <ellipse cx="100" cy="120" rx="85" ry="45" fill="url(#puckGrad)" />
+        <rect x="15" y="60" width="170" height="60" rx="10" fill="#000000" />
+        <ellipse cx="100" cy="60" rx="85" ry="45" fill="url(#puckGrad)" />
+        <text x="50%" y="72%" text-anchor="middle" fill="#ffffff" font-size="22" font-family="Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-weight="800">PuckTracker</text>
+      </svg>
+    </div>
+    <div class="title-group">
+      <h1>PuckTracker</h1>
+      <p class="tagline">NHL results and standings</p>
+    </div>
+  </header>
+
+  <main>
+    <section class="intro">
+      <h2>Standings</h2>
+      <p>Sorted by points. Shows conference (East/West) and divisions.</p>
+    </section>
+
+    <section id="standings" class="standings" aria-live="polite"></section>
+  </main>
+
+  <footer class="site-footer">
+    <small>&copy; <span id="year"></span> PuckTracker</small>
+  </footer>
+
+  <script src="./script.js"></script>
+</body>
+</html>
